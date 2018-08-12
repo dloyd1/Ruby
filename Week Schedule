@@ -1,0 +1,39 @@
+day = "Monday"
+
+if day.downcase.start_with? "s"
+ weekend = "Yes"
+else
+ weekend = "No"
+end
+
+def print_routine(day, weekend)
+  wake_up_time(day, weekend)
+  go_to_work?(day, weekend)
+  bedtime(day, weekend)
+end
+
+def wake_up_time(day, weekend)
+ if weekend == "Yes"
+   puts "Wake up at 11 AM."
+ else
+   puts "Wake up at 6 AM."
+ end
+end
+
+def go_to_work?(day, weekend)
+  if weekend == "No"
+    puts "Go to Work."
+  else
+    puts "Go for a run."
+  end
+end
+
+def bedtime(day, weekend)
+  if weekend == "No"
+    puts "Go to bed at 9 PM."
+  else
+    puts "Go to bed at 12 AM."
+  end
+end
+
+print_routine(day, weekend)
