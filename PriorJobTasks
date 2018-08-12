@@ -1,0 +1,26 @@
+loop do
+#These are the variables.
+exceltabs = 5
+num_returns = exceltabs * 2
+optionstb = ["balances", "does not balance", "somewhat balances"]
+number = rand(3)
+trialbalance = optionstb[number]
+received = "Received a trial balance that #{trialbalance}."
+outcome = ["#{received} Use #{exceltabs} tabs in an Excel File to prepare #{num_returns} tax returns.", "#{received} Request new trial balance from the client tomorrow.", "#{received} Worked on the Trial Balance using #{exceltabs} tabs in an Excel File and will send back to the client tomorrow."] 
+#This is the method.
+def Excel(optionstb, exceltabs, num_returns, trialbalance, received, outcome)
+  if trialbalance == optionstb[2]
+   puts outcome[2]
+  elsif trialbalance == optionstb[1]
+   puts outcome[1]
+  elsif trialbalance == optionstb[0]
+   puts outcome[0]
+  end
+end
+#Executing the method.
+Excel(optionstb, exceltabs, num_returns, trialbalance, received, outcome)
+#Stops the loop once the client provides a good trial balance.
+if number == 0
+break
+end
+end
