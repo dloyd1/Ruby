@@ -1,4 +1,7 @@
-day = "Monday"
+dayarray = ["Sunday", "Monday", "Tuesday", "Wedneday", "Thursday", " Friday", "Saturday" ]
+
+ dayarray.map do |day|
+ puts "Today is #{day}."
 
 if day.downcase.start_with? "s"
  weekend = "Yes"
@@ -37,3 +40,5 @@ def bedtime(day, weekend)
 end
 
 print_routine(day, weekend)
+
+end 
